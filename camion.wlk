@@ -20,7 +20,11 @@ object camion{
 /*  Saber si el camion...                                                                */
     method puedeCircularEnRuta(unValor) = self.cosasQueSuperanPeligrosidad(unValor).peligrosidad()
 
+    method tieneAlgoQuePesaEntre(min,max) = carga.any({ c=>c.peso().between(min,max)})
 
+    method cosaMasPesada() = carga.max({ c=>c.peso()})
+
+}
 
 
     
