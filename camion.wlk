@@ -17,7 +17,8 @@ object camion{
     method cosasQueSuperanPeligrosidad(nivel) = carga.filter({ c => c.peligrosidad() > nivel })
     method cosasMasPeligrosasQue(unaCosa) = carga.filter({ c => c.peligrosidad() > unaCosa.peligrosidad() })
     method excedidoMaximoPeso() = self.pesoTotal() > 2500
-    method puedeCircularEnRuta(unValor) = self.excedidoMaximoPeso() && self.cosasQueSuperanPeligrosidad(unValor).peligrosidad()
+/*  Saber si el camion...                                                                */
+    method puedeCircularEnRuta(unValor) = self.cosasQueSuperanPeligrosidad(unValor).peligrosidad()
 
 
 
